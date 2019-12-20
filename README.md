@@ -54,8 +54,8 @@ Seq2Seq_master.ipynb: Implementation of Seq2Seq model
 ## Possible Improvement for Seq2Seq
 During training the Seq2Seq model, I tried different hyperparameters(learning rate, drop out rate etc) and model architecture(number of neurons, number of LSTM layers), but the validation loss stagnated after certain epochs. This looks to me indicate a obvious flaw in the model. I think further improvement can be achieved by 
 
-1. Use inferential model during prediction period.
+1. **Use inferential model during prediction period.**
 I found most of the prediction that Seq2Seq made range around 7-20 visitors per day. This is such a bad generalization, possibly due to the fact that the model did not take the visitor traffic made on time T-1 to aid in predicting visitor on time T. I should gave model the flexibility to predict number based on its prediction on the last round so that it can built up the traffic momentum.
 
-2. 
-
+2. **Try different look-back period**
+We can definitely try to look back differnt length of time. Currently the model was designed to look back 400 days history, which can be changed for sure. By reducing the look-back period we can have much more training data and possibly improve model performance.
