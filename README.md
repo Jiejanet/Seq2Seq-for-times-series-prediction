@@ -24,9 +24,14 @@ Also we did certain statistical features:
 
 ## Model Detail
 ![Model Structure](https://github.com/Jiejanet/Seq2Seq-for-times-series-prediction/blob/master/Model%20Structure.png)
+The Seq2Seq architecture is comprised of two parts, an encoder and a decoder. The team designed an encoder which looks into 400 days of historical data and a decoder to predict 39 days of future visitor traffic. The same features used for static modeling were then inputted into the encoder with the intention that it would pick up patterns embedded within the sequential 400 days’ worth of data. The decoder was fed stationary information about the 39 upcoming days, such as flags for holidays, area, and genre.
+
 ![Train and Validation Split](https://github.com/Jiejanet/Seq2Seq-for-times-series-prediction/blob/master/Train%20and%20validation%20split.png)
+Data from January 1st, 2016 to March 14th, 2017 was used for training and data from February 9th, 2016 to April 22nd, 2017 was used as a validation set.
 
 ## File Description
-DataCleaning_1120.ipynb:
+DataCleaning_1120.ipynb: Merge separate files together and created a closing flag feature. (Does not include weather and statistical features)
+Seq2Seq_master.ipynb: Implementation of Seq2Seq model, you can s
 
 
+## Further Improvement
